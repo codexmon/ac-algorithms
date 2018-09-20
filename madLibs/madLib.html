@@ -17,12 +17,43 @@
 			 <button id="lib-button">Lib it!</button>
 			  
 			 <div id="story"></div>  
+			
+			<!-- JQuery Script -->
+			<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+			<script src="madLib.js">
+				// Input: elements from the form, strings the user supplies
+				// Output: the sentence, a string displayed to the user.
+
+				// Create a function called makeMadLib
+					// Get the values from the form.
+					// Append those values concatenated in a sentence to the DOM.
+
+				// Create an event listener that listens for a click of the button with an id of lib-button
+					// When clicked, the event function should call the makeMadLib function
+				// $(document).ready(function(){
+				// function makeMadLib() {
+				// 	var noun = $("#noun").val();
+				// 	var adjective = $("#adjective").val();
+				// 	var person = $("#person").val();
+				// 	var sentence = person + " loves her " + adjective + " glasses, especially when tossed to the ground and crushed with shiny black tap dance " + noun + ".";
+				// 	$("#story").append("<p>" + sentence + "</p>");
+				// }
+
+				// $("#lib-button").on("click", function(){
+				// 	makeMadLib();
+				// })
+
+			    // });
+			</script> 
 		</body>
 	</html>
 	
 <!-- 
-1) Add a script tag to the bottom of the page for your code.
-2) Add an event listener to the button so that it calls a makeMadLib function when clicked.
-3)In the makeMadLib function, retrieve the current values of the form input elements, make a story from them, and output that in the story div (like "Laura really likes pink cucumbers.") -->
-
-<!-- Bonus: Make an object with the list elements as keys and the inputs as values.  -->
+	1) Add a script tag to the bottom of the page for your code.
+var obj = {};
+					obj.push(key,value);
+	2) Add an event listener to the button so that it calls a makeMadLib function when clicked.
+	
+	3)In the makeMadLib function, retrieve the current values of the form input elements, make a story from them, and output that in the story div (like "Laura really likes pink cucumbers.") 
+	
+	Bonus: Make an object with the list elements as keys and the inputs as values.  -->
