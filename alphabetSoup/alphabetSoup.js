@@ -33,7 +33,32 @@ console.log(result) // "ghimmnorstyy"
 
 **/
 
+// Input: a string
+// Output: a string
+// Purpose: to alphabetize the list of letters in a given string
+// string is our input parameter
+
+//My preliminary pseudocode.
+// Create a variable named result that is the output of a function
+// If input is an empty string, output is also an empty string.
+// If input is one word, the word is sorted so that letters appear in alphabetical order.
+// If input is two words, then a blank space comes before the sorted letters in both words.
+// If input is three or more words, then no blank spaces appear before the sorted letters of all words.
+
 function alphabetSoup(str) {
-	//Your code here
-	
+	//turn the string into an array of characters, using split, store the resulting array in a variable, split method takes in delimiter -- ""
+	//Sort the array (Sort method does not take in an argument)
+	//Join the elements in the array back into a string, the argument for the .join() method will be ""
+	//get rid of the spaces using trim
+
+	//Version 1:
+	var characters = str.split("").sort().join("").trim();
+	return characters;
+
+	// Version 2:
+	//var characters = str.split("");
+	//var array = characters.sort();
+	//var newArray = array.join("");
+	//var newString = newArray.trim();
+	//return newString;
 }
