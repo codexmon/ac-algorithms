@@ -15,5 +15,19 @@
 //    For example, given array A = [3, 8, 9, 7, 6] and K = 3, the function should return [9, 7, 6, 3, 8].\
 
 function cyclicRotation(arr, rotation){
-    //Your code here...
+    // Input: array, number of rotations
+    // Output: 1 new array, unshift numbers by k times of rotations
+    // Purpose: element's position in the manipulated array
+    // Need for loop for the number of rotations
+    for (var i = 0; i < rotation; i++) {
+        var drop = arr.pop();
+        arr.unshift(drop);
+    }
+    return arr;
+    // Pop off last element of the array - to store in the variable
+    // Unshift beginning element of the array - add that variable
+    // these numbers need to equal each other; store the number in a variable
 }
+
+var result = cyclicRotation([3, 8, 9, 7, 6], 3);
+console.log(result);
