@@ -11,8 +11,18 @@
 
 //Add radius as the parameter for our function
 
+// Given the radius from the user, we want to find the area and the perimeter of the circle
+// Input: radius, a number
+//Create a variable to store the calculated area
+//Create a variable to store the calculated perimeter
+//Calculate area with PI * radius ^ 2
+//Calculate perimeter with 2 * PI * radius
+//Return statement that is the string with the variables
+// Outputs: area and perimeter, two numbers, bonus: output will be a concatenated string
+
 $(document).ready(function (){
 
+	//Version 1: does not accept input from user
 	function circleCalculation(num) {
 		//calculate the area of the circle, store the value in a variable
 		var areaCircle = Math.round(Math.PI * Math.pow(num, 2));
@@ -26,4 +36,16 @@ $(document).ready(function (){
 	
 	var circleSentence = circleCalculation(10);
 	console.log(circleSentence); // have console.log outside of a function so that it is not console logged every time the function is run
+
+	//Version 2: accepts input from user
+	function circleCalculation(){
+		var radius = prompt("What is the radius of your circle?");
+		var areaCircle = Math.round(Math.PI * radius * radius);
+		var perimeterCircle = Math.round(2 * Math.PI * radius);
+		var sentence = "The area of the circle is " + areaCircle + " and the perimeter of the circle is " + perimeterCircle + "."
+		return sentence;
+	}
+	
+	var circleSentence = circleCalculation();
+	console.log(circleSentence);
 });

@@ -1,10 +1,20 @@
 /* 
 Write a function alphabetSoup(str) that takes a string and returns a string with
 the letters in alphabetical order. Assume the input will not contain numbers or punctuation.
-Hint: Check out split(), sort() and join() methods at 
+Hint: Check out split(), sort() and join() methods at:
+
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
+split() --> splits string into an array of letters
+Inside the () is an argument, a delimiter, where we want the split to occur.
+"" - every letter
+" " - every word
+___.split() --> the blank can only be a string data type
+
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+sort() --> sorts elements in an array alphabetically
+
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join
+join(" ") --> takes an array and combines elements to make a string
 
 Bonus:
 If there are spaces in the input, do not include them in the result.
@@ -34,7 +44,7 @@ console.log(result) // "ghimmnorstyy"
 **/
 
 // Input: a string
-// Output: a string
+// Output: a string, but with letters in alphabetical order
 // Purpose: to alphabetize the list of letters in a given string
 // string is our input parameter
 
@@ -49,9 +59,9 @@ function alphabetSoup(str) {
 	//turn the string into an array of characters, using split, store the resulting array in a variable, split method takes in delimiter -- ""
 	//Sort the array (Sort method does not take in an argument)
 	//Join the elements in the array back into a string, the argument for the .join() method will be ""
-	//get rid of the spaces using trim
+	//get rid of the spaces at the beginning or the end of a string by using .trim()
 
-	//Version 1:
+	//Version 1 (does not account for capital letters, which appears sooner in the unicode system):
 	var characters = str.split("").sort().join("").trim();
 	return characters;
 
@@ -61,4 +71,12 @@ function alphabetSoup(str) {
 	//var newArray = array.join("");
 	//var newString = newArray.trim();
 	//return newString;
+
+	// Version 3:
+	// str = str.split("").sort().join("").trim();
+	// return str;
+
+	//Version 4 (does account for capital letters):
+	// var characters = str.toLowerCase().str.split("").sort().join("").trim();
+	// return characters;
 }
