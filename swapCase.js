@@ -84,6 +84,13 @@ function swapCase(str) {
 			newString = newString + arrayLetters[i].toUpperCase();
 		}
 	} 
+
+	//Alternate Code block in ES6 with .map and ternary statements that often show up in React.js
+	arrayLetters.map((letter) => { //i is only necessary if I need to assign i to a div and loop through
+		arrayLetters === arrayLetters.toUpperCase() 
+			? newString += arrayLetters.toLowerCase()
+			: newString += arrayLetters.toUpperCase()
+	})
 	return newString;
 }
 
