@@ -11,20 +11,20 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 /**
 Examples:
 
-var result = dashInsert("454793");
+var result = dashInsert(454793);
 console.log(result) // "4547-9-3"
 
-var result = dashInsert("44");
+var result = dashInsert(44);
 console.log(result) // "44"
 
-var result = dashInsert("0");
+var result = dashInsert(0);
 console.log(result) // "0"
 
-var result = isBigger("13");
+var result = dashInsert(13);
 console.log(result) // "1-3"
 
 **/
 
-function dashInsert(str) {
+function dashInsert(num) {
 	// Your code
 }
